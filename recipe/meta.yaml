@@ -24,7 +24,7 @@ source:
     - win_test_outputs.patch  # [win]
 
 build:
-  skip: true  # [not py27 or np==110 or win]
+  skip: true  # [not py27 or np==110]
   number: 0
   detect_binary_files_with_prefix: True
   features:
