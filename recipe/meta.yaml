@@ -14,6 +14,7 @@ source:
   sha256: {{ sha256 }}
   patches:
     - no_pyplot_in_test.patch
+    - remove_unit_testing.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
     - hdf5_win.patch  # [win]
