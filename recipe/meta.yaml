@@ -14,7 +14,6 @@ source:
   sha256: {{ sha256 }}
   patches:
     - no_pyplot_in_test.patch
-    - remove_unit_testing.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
     - hdf5_win.patch  # [win]
@@ -23,6 +22,7 @@ source:
     - cstdint_types.patch  # [win]
     - parapack_win.patch  # [win]
     - win_test_outputs.patch  # [win]
+    - remove_unit_testing.patch
 
 build:
   skip: true  # [not py27 or np==110]
