@@ -1,7 +1,7 @@
-Index: CMakeLists.txt
+Index: alps/CMakeLists.txt
 ===================================================================
---- CMakeLists.txt	(revision 7809)
-+++ CMakeLists.txt	(working copy)
+--- alps/CMakeLists.txt	(revision 7809)
++++ alps/CMakeLists.txt	(working copy)
 @@ -408,9 +408,9 @@
    endif(MSVC)
  endif(SZIP_FOUND AND NOT ALPS_USE_VISTRAILS)

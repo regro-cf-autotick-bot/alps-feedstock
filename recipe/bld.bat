@@ -1,6 +1,8 @@
 :: Fix Visual Studio 2008 for x64
 call setup_x64
 
+cd "%SRC_DIR%\alps"
+
 :: Compile clapack
 "%PYTHON%" "%RECIPE_DIR%\get_clapack_src.py"
 if errorlevel 1 exit 1
@@ -26,7 +28,7 @@ if errorlevel 1 exit 1
 
 
 :: Start actual ALPS build
-cd %SRC_DIR%
+cd "%SRC_DIR%\alps"
 if errorlevel 1 exit 1
 
 
