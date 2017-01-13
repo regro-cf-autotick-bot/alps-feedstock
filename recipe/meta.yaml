@@ -12,6 +12,7 @@ source:
   url: http://alps.comp-phys.org/static/software/releases/{{ name }}-{{ version }}-src.tar.gz
   sha256: {{ sha256 }}
   patches:
+    - remove_unit_testing.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
 
