@@ -16,12 +16,13 @@ source:
     - no_pyplot_in_test.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
-    - hdf5_win.patch  # [win]
+    - hdf5_win.patch
     - mps_win.patch  # [win]
     - r7818.patch  # [win]
     - cstdint_types.patch  # [win]
     - parapack_win.patch  # [win]
     - win_test_outputs.patch  # [win]
+    - remove_unit_testing.patch
 
 build:
   skip: true  # [not py27 or np==110]
