@@ -16,6 +16,7 @@ source:
     - skip_boost_numpy.patch
     - fix_skeleton.patch
     - no_python_extra_vars.patch
+    - numpy_array_cdecl.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
 
