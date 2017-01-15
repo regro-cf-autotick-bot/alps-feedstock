@@ -1,7 +1,7 @@
-Index: config/FindBoostForALPS.cmake
+Index: alps/config/FindBoostForALPS.cmake
 ===================================================================
---- config/FindBoostForALPS.cmake	(revision 7809)
-+++ config/FindBoostForALPS.cmake	(working copy)
+--- alps/config/FindBoostForALPS.cmake	(revision 7809)
++++ alps/config/FindBoostForALPS.cmake	(working copy)
 @@ -60,6 +60,14 @@
    unset(UTF)
    unset(TIMER)

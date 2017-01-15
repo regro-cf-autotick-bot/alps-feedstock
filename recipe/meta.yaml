@@ -1,7 +1,6 @@
 {% set name = "alps" %}
-{% set version = "2.3.b1" %}
-{% set revision = "r7782" %}
-{% set sha256 = "69910b4fcd5e98a01741843de530f896864a390f693bf010b2db56ceb3f071d7" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "e64208d1e5acdd6f569277413c4867e1fa366cf4a224570eacbf1e9939fca2d2" %}
 {% set blas = os.environ.get('BLAS') or 'openblas' %}
 
 package:
@@ -9,20 +8,17 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}-{{revision}}-src.tar.gz
-  url: http://alps.comp-phys.org/static/software/releases/{{ name }}-{{ version }}-{{revision}}-src.tar.gz
+  fn: {{ name }}-{{ version }}-src.tar.gz
+  url: http://alps.comp-phys.org/static/software/releases/{{ name }}-{{ version }}-src.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - no_pyplot_in_test.patch
+    - remove_unit_testing.patch
+    - skip_boost_numpy.patch
+    - fix_skeleton.patch
+    - no_python_extra_vars.patch
+    - numpy_array_cdecl.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
-    - hdf5_win.patch
-    - mps_win.patch  # [win]
-    - r7818.patch  # [win]
-    - cstdint_types.patch  # [win]
-    - parapack_win.patch  # [win]
-    - win_test_outputs.patch  # [win]
-    - remove_unit_testing.patch
 
 build:
   skip: true  # [not py27 or np==110]
@@ -73,7 +69,7 @@ test:
 about:
   home: http://alps.comp-phys.org/
   license: ALPS
-  license_file: LICENSE.txt
+  license_file: alps/LICENSE.txt
   summary: 'Algorithms and Libraries for Physics Simulations'
 
   description: |

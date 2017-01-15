@@ -2,6 +2,7 @@
 
 set -e
 
+cd alps
 
 function num_cores {
   num_cpus=1
