@@ -1,7 +1,7 @@
-Index: config/FindPython.cmake
+Index: alps/config/FindPython.cmake
 ===================================================================
---- config/FindPython.cmake	(revision 7834)
-+++ config/FindPython.cmake	(working copy)
+--- alps/config/FindPython.cmake	(revision 7834)
++++ alps/config/FindPython.cmake	(working copy)
 @@ -179,8 +179,9 @@
        #
        # libraries which must be linked in when embedding

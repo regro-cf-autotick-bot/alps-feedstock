@@ -1,7 +1,7 @@
-Index: src/alps/python/numpy_array.hpp
+Index: alps/src/alps/python/numpy_array.hpp
 ===================================================================
---- src/alps/python/numpy_array.hpp	(revision 7838)
-+++ src/alps/python/numpy_array.hpp	(revision 7839)
+--- alps/src/alps/python/numpy_array.hpp	(revision 7838)
++++ alps/src/alps/python/numpy_array.hpp	(revision 7839)
 @@ -32,6 +32,7 @@
  #define ALPS_PYTHON_NUMPY_ARRAY
  
