@@ -17,6 +17,7 @@ source:
     - fix_skeleton.patch
     - no_python_extra_vars.patch
     - numpy_array_cdecl.patch
+    - fix_xsl_padding.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
 
@@ -65,6 +66,7 @@ test:
     - test -f $PREFIX/lib/libalps.so     # [linux]
     - python -c "import pyalps"
     - python -c "import pyalps; print(pyalps.tools.xslPath())"
+    - python -c "import pyalps; pyalps.copyStylesheet('.')"
 
 about:
   home: http://alps.comp-phys.org/
