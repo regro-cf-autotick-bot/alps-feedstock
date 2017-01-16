@@ -1,7 +1,7 @@
-Index: lib/pyalps/tools.py
+Index: alps/lib/pyalps/tools.py
 ===================================================================
---- lib/pyalps/tools.py	(revision 7839)
-+++ lib/pyalps/tools.py	(revision 7840)
+--- alps/lib/pyalps/tools.py	(revision 7839)
++++ alps/lib/pyalps/tools.py	(revision 7840)
 @@ -282,7 +282,7 @@
          return os.path.join(sys.exec_prefix,'../Resources/lib/xml/ALPS.xsl')
        if platform.system()=='Windows':
