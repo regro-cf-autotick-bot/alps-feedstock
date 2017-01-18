@@ -18,6 +18,7 @@ source:
     - no_python_extra_vars.patch
     - numpy_array_cdecl.patch
     - fix_xsl_padding.patch
+    - remove_padding_from_prefix.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
 
