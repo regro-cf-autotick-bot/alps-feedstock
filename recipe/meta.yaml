@@ -18,12 +18,13 @@ source:
     - no_python_extra_vars.patch
     - numpy_array_cdecl.patch
     - fix_xsl_padding.patch
+    - remove_padding_from_prefix.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
 
 build:
   skip: true  # [not py27 or np==110]
-  number: 1
+  number: 2
   detect_binary_files_with_prefix: True
   features:
     - blas_{{blas}}     # [not win]
