@@ -61,6 +61,7 @@ if [[ `uname -s` == "Darwin" ]]; then
     -DALPS_ENABLE_MPI=OFF \
     -DALPS_BUILD_APPLICATIONS=ON \
     -DALPS_BUILD_EXAMPLES=OFF \
+    -DALPS_BUILD_TESTS=OFF \
     -DBOOST_ROOT=$PREFIX \
     -DBoost_NO_SYSTEM_PATHS=ON \
     -DPYTHON_INTERPRETER=$PYTHON \
@@ -78,6 +79,7 @@ else
     -DALPS_ENABLE_MPI=OFF \
     -DALPS_BUILD_APPLICATIONS=ON \
     -DALPS_BUILD_EXAMPLES=OFF \
+    -DALPS_BUILD_TESTS=OFF \
     -DBOOST_ROOT=$PREFIX \
     -DBoost_NO_SYSTEM_PATHS=ON \
     -DPYTHON_INTERPRETER=$PYTHON \
@@ -86,8 +88,6 @@ fi
 
 ##Build
 make -j $(num_cores)
-## Test
-ctest --output-on-failure -E test_vector
 ## Install
 make install
 ## Install pyalps to correct path
