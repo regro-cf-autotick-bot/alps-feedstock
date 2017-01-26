@@ -24,7 +24,8 @@ source:
 
 build:
   skip: true  # [not py27 or np==110]
-  number: 2
+  number: 3
+  binary_relocation: False  # [osx]
   detect_binary_files_with_prefix: True
   features:
     - blas_{{blas}}     # [not win]
