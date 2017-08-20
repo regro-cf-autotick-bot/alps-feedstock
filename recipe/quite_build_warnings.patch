@@ -1,0 +1,13 @@
+Index: alps/CMakeLists.txt
+===================================================================
+--- alps/CMakeLists.txt	(revision 7834)
++++ alps/CMakeLists.txt	(working copy)
+@@ -151,6 +151,8 @@
+ STRING(REGEX MATCH "clang" IS_CLANG "${ALPS_COMPILER_VERSION}")
+ if(IS_CLANG)
+     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ftemplate-depth-256 -Wall -Wno-unknown-pragmas -Wno-unused-function -Wno-overloaded-virtual -Wno-unneeded-internal-declaration -Wno-unused-variable -Wno-return-type-c-linkage")
++    # Additional flags
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wdeprecated-increment-bool -Wunused-private-field -Wconstant-conversion -Wunused-local-typedef")
+     if(NOT ${CMAKE_CXX_FLAGS} MATCHES "-(std=c\\+\\+11|stdlib=)")
+         # compilation fails with -stdlib=libc++, which is new default on Mavericks
+         message(STATUS "Forcing -stdlib=libstdc++. If you want to override this decision explicitly add -stdlib=libc++ or -std=c++11 to CMAKE_CXX_FLAGS.")

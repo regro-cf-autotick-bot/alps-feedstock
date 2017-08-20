@@ -21,10 +21,11 @@ source:
     - remove_padding_from_prefix.patch
     - no_install_deplibs.patch  # [win]
     - boost_defs.patch  # [win]
+    - quite_build_warnings.patch  # [not win]
 
 build:
-  skip: true  # [not py27 or np==110]
-  number: 3
+  skip: true  # [not py27 or not np==112]
+  number: 4
   binary_relocation: False  # [osx]
   detect_binary_files_with_prefix: True
   features:
