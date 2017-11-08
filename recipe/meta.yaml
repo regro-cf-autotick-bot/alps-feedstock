@@ -8,7 +8,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}-src.tar.gz
   url: http://alps.comp-phys.org/static/software/releases/{{ name }}-{{ version }}-src.tar.gz
   sha256: {{ sha256 }}
   patches:
@@ -24,13 +23,12 @@ source:
 
 build:
   skip: true  # [not py27]
-  number: 4
+  number: 5
   binary_relocation: False  # [osx]
   detect_binary_files_with_prefix: True
   features:
     - blas_{{blas}}     # [not win]
     - vc9               # [win and py27]
-    - vc10              # [win and py34]
     - vc14              # [win and py35]
 
 
@@ -45,10 +43,9 @@ requirements:
     - numpy 1.9.*  # [win and py35]
     - numpy 1.11.*  # [win and py36]
     - scipy
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - blas 1.* {{blas}}     # [not win]
     - vc 9                  # [win and py27]
-    - vc 10                 # [win and py34]
     - vc 14                 # [win and py35]
     - vs2008_express_vc_python_patch  # [win]
   run:
@@ -60,10 +57,9 @@ requirements:
     - numpy >=1.11  # [win and py36]
     - scipy
     - matplotlib
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - blas 1.* {{blas}}     # [not win]
     - vc 9                  # [win and py27]
-    - vc 10                 # [win and py34]
     - vc 14                 # [win and py35]
 
 test:
