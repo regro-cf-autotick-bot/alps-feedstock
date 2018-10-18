@@ -23,7 +23,7 @@ source:
 
 build:
   skip: true  # [not py27]
-  number: 5
+  number: 1005
   binary_relocation: False  # [osx]
   detect_binary_files_with_prefix: True
   features:
