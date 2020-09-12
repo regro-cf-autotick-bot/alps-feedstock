@@ -23,11 +23,11 @@ source:
 
 build:
   skip: true  # [not py27]
-  number: 5
+  number: 6
   binary_relocation: False  # [osx]
   detect_binary_files_with_prefix: True
   features:
-    - blas_{{blas}}     # [not win]
+    - blas_{{ blas }}     # [not win]
     - vc9               # [win and py27]
     - vc14              # [win and py35]
 
@@ -44,7 +44,7 @@ requirements:
     - numpy 1.11.*  # [win and py36]
     - scipy
     - hdf5 1.10.1
-    - blas 1.* {{blas}}     # [not win]
+    - blas 1.* {{ blas }}     # [not win]
     - vc 9                  # [win and py27]
     - vc 14                 # [win and py35]
     - vs2008_express_vc_python_patch  # [win]
@@ -58,7 +58,7 @@ requirements:
     - scipy
     - matplotlib
     - hdf5 1.10.1
-    - blas 1.* {{blas}}     # [not win]
+    - blas 1.* {{ blas }}     # [not win]
     - vc 9                  # [win and py27]
     - vc 14                 # [win and py35]
 
